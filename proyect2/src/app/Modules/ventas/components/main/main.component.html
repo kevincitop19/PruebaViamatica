@@ -1,0 +1,17 @@
+<app-toolbar></app-toolbar>
+
+
+<mat-form-field appearance="fill" style="margin-left: 16px;">
+    <mat-label>Seleccione una opción</mat-label>
+    <mat-select (selectionChange)="onSelectionChange($event)">
+      <mat-option *ngFor="let option of options" [value]="option.categoryId">
+        {{ option.categoryName }}
+      </mat-option>
+    </mat-select>
+   
+</mat-form-field>
+<div class="grid-container">
+  <div class="grid-item" *ngFor="let product of productList">
+    <app-products [productName]="product.productName" [productPrice]="product.price" [productDescription]="product.description"></app-products>
+  </div>
+</div>

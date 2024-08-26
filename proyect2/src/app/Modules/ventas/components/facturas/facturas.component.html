@@ -1,0 +1,21 @@
+<mat-card class="cart-card">
+    <mat-card-header>
+      <mat-card-title class="cart-title">Factura</mat-card-title>
+    </mat-card-header>
+  
+    <mat-card-content>
+      <mat-list *ngIf="cartItems.length > 0">
+          <mat-list-item *ngFor="let item of cartItems; let i = index" class="cart-item">
+            <span matListItemTitle class="item-name">{{ item.productName }}</span>
+            <span matListItemMeta class="item-actions">
+              <span class="item-price">{{ item.price  }}</span>
+             
+            </span>
+          </mat-list-item>
+        </mat-list>
+  
+      
+    </mat-card-content>
+  
+   
+  </mat-card>

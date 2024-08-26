@@ -1,0 +1,29 @@
+<mat-toolbar color="primary">
+  <div class="toolbar-left">
+    <a mat-button (click)="inicio()" class="app-name">Mi Aplicación</a>
+  </div>
+
+  <span class="spacer"></span> <!-- Espaciador para alinear los elementos a la derecha -->
+
+  <nav class="toolbar-nav">
+    <a mat-button (click)="Carrito()">Carrito ({{ _ServiceCart.getCart.length }})</a>
+    
+    <button mat-button [matMenuTriggerFor]="userMenu">
+      {{ authService.username }}
+      <mat-icon>arrow_drop_down</mat-icon>
+    </button>
+    
+    <mat-menu #userMenu="matMenu">
+      <button mat-menu-item (click)="verFacturas()">
+        <mat-icon>receipt</mat-icon>
+        <span>Ver facturas</span>
+      </button>
+      <button mat-menu-item (click)="logout()">
+        <mat-icon>exit_to_app</mat-icon>
+        <span>Cerrar sesión</span>
+      </button>
+    </mat-menu>
+  </nav>
+
+</mat-toolbar>
+

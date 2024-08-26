@@ -1,0 +1,32 @@
+<app-toolbar></app-toolbar>
+<mat-card class="cart-card">
+  <mat-card-header>
+    <mat-card-title class="cart-title">Carrito de Compras</mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content>
+    <mat-list *ngIf="cartItems.length > 0; else emptyCart">
+        <mat-list-item *ngFor="let item of cartItems; let i = index" class="cart-item">
+          <span matListItemTitle class="item-name">{{ item.productName }}</span>
+          <span matListItemMeta class="item-actions">
+            <span class="item-price">{{ item.price | currency:'USD' }}</span>
+            <button mat-icon-button color="warn" (click)="removeFromCart(i)" aria-label="Eliminar">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </span>
+        </mat-list-item>
+      </mat-list>
+
+    <div class="checkout-button">
+      <button mat-raised-button color="primary" (click)="pucharse()" >Comprar</button>
+    </div>
+  </mat-card-content>
+
+  <ng-template #emptyCart>
+    <mat-card-content class="empty-cart">
+      <p>El carrito está vacío.</p>
+    </mat-card-content>
+  </ng-template>
+</mat-card>
+
+  

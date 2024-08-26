@@ -1,0 +1,38 @@
+.cart-card {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  
+  .checkout-button {
+    text-align: right;
+    margin-top: 20px;
+  }
+  
+  .empty-cart {
+    text-align: center;
+    color: #999;
+    font-style: italic;
+  }
+
+  .cart-item {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+  }
+  
+  .item-name {
+    flex-grow: 1;
+  }
+  
+  .item-actions {
+    display: flex;
+    align-items: center;
+  }
+  
+  .item-price {
+    margin-right: 16px;
+  }
+

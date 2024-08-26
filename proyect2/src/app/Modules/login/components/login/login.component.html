@@ -1,0 +1,24 @@
+<mat-card>
+  <mat-card-content>
+    <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+      <mat-form-field appearance="fill">
+        <mat-label>Username</mat-label>
+        <input matInput formControlName="username"  required />
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Password</mat-label>
+        <input matInput formControlName="password" type="password" required />
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" type="submit" [disabled]="loginForm.invalid">Login</button>
+    </form>
+
+    <!-- Enlace para registro -->
+    <div style="margin-top: 16px;">
+      <p>No tienes cuenta? <a mat-button (click)="registrar()">Regístrate aquí</a></p>
+    </div>
+  </mat-card-content>
+</mat-card>
+
+  

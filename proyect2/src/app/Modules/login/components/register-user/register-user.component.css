@@ -1,0 +1,27 @@
+/* Agrega espacio alrededor del formulario */
+mat-card {
+    max-width: 400px;
+    margin: 20px auto;
+  }
+  
+  /* Ajusta el tamaño del contenido del card */
+  mat-card-content {
+    padding: 20px;
+  }
+  
+  /* Estilo para los campos del formulario */
+  mat-form-field {
+    width: 100%;
+  }
+  
+  /* Estilo para el botón de registro */
+  button[mat-raised-button] {
+    margin-top: 16px;
+  }
+  
+  /* Agrega espacio alrededor del botón */
+  button[mat-raised-button] {
+    display: block;
+    width: 100%;
+  }
+  

@@ -1,0 +1,42 @@
+mat-toolbar {
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  height: 64px; /* Ajusta según el tamaño deseado */
+  background-color: #727171; /* Color de fondo gris oscuro */
+}
+
+.toolbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.app-name {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #e0e0e0; /* Color del texto gris claro */
+}
+
+.toolbar-nav {
+  display: flex;
+  align-items: center;
+}
+
+.toolbar-nav a {
+  margin: 0 8px;
+  color: #e0e0e0; /* Color del texto gris claro */
+}
+
+.toolbar-nav a:hover {
+  background-color: rgba(224, 224, 224, 0.2); /* Efecto hover gris claro */
+}
+
+.spacer {
+  flex: 1;
+}
+
+.username {
+  margin-left: 16px;
+  color: #e0e0e0; /* Color del texto gris claro */
+  font-weight: 500;
+}
